@@ -1,0 +1,74 @@
+ 1.USING STL-reverse() --(import algorithm)
+#include <algorithm>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	int arr[] = { 1, 45, 54, 71, 76, 12 };
+
+	// Compute the sizes
+	int n = sizeof(arr) / sizeof(arr[0]);
+
+	
+	reverse(arr, arr + n);
+
+	// Print the reversed array
+	cout << "\nReversed Array: ";
+	for (int i = 0; i < n; i++)
+		cout << arr[i] << " ";
+	return 0;
+}
+
+
+
+2.SWAP:
+#include <iostream>
+
+using namespace std;
+
+
+//Function to reverse array 
+void reverseArray(int arr[], int n) {
+   int p1 = 0, p2 = n - 1;
+   while (p1 < p2) {
+      swap(arr[p1], arr[p2]);
+      p1++; p2--;
+   }
+   cout << "The reversed array is:- " << endl;
+   for (int i = 0; i < n; i++) {
+      cout << arr[i] << " ";
+   }
+}
+int main() {
+   int n = 5;
+   int arr[] = { 5, 4, 3, 2, 1};
+   reverseArray(arr, n);
+   return 0;
+}
+
+
+3.RECURSION:
+#include <iostream>
+
+using namespace std;
+//Function to reverse array using recursion
+void reverseArray(int arr[], int p1, int p2) {
+   if (p1 < p2) {
+      swap(arr[p1], arr[p2]);
+      reverseArray(arr, p1 + 1, p2 - 1);
+   }
+}
+int main() {
+   int n = 5;
+   int arr[] = { 5, 4, 3, 2, 1 };
+   reverseArray(arr, 0, n - 1);
+   cout << "The reversed array is:- " << endl;
+   for (int i = 0; i < n; i++) {
+      cout << arr[i] << " ";
+   }
+   return 0;
+}
+
+//same as sswap except no declaration and pass parameters
