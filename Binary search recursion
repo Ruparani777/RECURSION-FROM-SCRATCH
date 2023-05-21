@@ -1,0 +1,6 @@
+
+if left is <= right return 
+int mid =r+l/2 
+3 cases -- if x= = mid return mid 
+else ifx >mid return fun(mid+1,x,r)
+else return fun(l,mid-1,x)
